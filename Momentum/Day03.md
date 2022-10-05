@@ -1,7 +1,7 @@
 ### Functions
 ---
 - Objects 안에서의 function
-```
+```javascript
 const player ={
     name="Junki",
     sayHello=function(otherPersonsName){
@@ -22,3 +22,32 @@ return만 작업하고 추가 수행은 이뤄지지 않는다.
 ---
 ### Conditionals
 ---
+- KeyWord -> IF,ELSE
+---
+
+- 조건문은  true false 여부를 알려주기때문에 매우 중요한 문법이다.
+- 무엇인가를 확인할때 대부분 사용.
+
+### 예제 - 나이계산기 만들어보기.
+
+
+1. 유저의 나이를 묻는것부터 시작해보자
+
+```javascript
+
+const age = prompt("How Old Are You?");
+
+prompt 함수는 굉장히 old한 function이다.
+브라우저 안에서 javascript를 일시정지시킨다.
+유저에게 값을 물어보는 아주아주 오래된방법.
+현재는 거의 사용하지않는다.
+```
+
+```javascript
+
+console.log(typeof age);
+
+typeof -> 변수의 value를 확인하는 방법 in javascript
+```
+
+

@@ -4,7 +4,7 @@
 1. JS의 사용하는 자료형에 대해 공부(숫자,  문자형)
 2. 문자형(String) 은 '' 또는 ""로 처리.
    
-```
+```javascript
 console.log("Hi" +"My name is" ~~)
 
 ```
@@ -19,7 +19,7 @@ console.log("Hi" +"My name is" ~~)
 
 ** 주로 JS에선 const값의 변수를 정의해서 사용하나,변수의 값을 변경할 계획이 있으면 let 변수를 사용**
 
-```
+```javascript
 let a = b;
 let a = c;
 //재선언 금지
@@ -46,7 +46,7 @@ a = d;
 ---
 - 매우 간단한 변수.
   - true or false
-```
+```javascript
 const amIFat = true;
 console.log(amIFat);
 ```

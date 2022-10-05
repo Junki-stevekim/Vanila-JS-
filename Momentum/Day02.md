@@ -21,7 +21,7 @@ player.handsome
 이렇듯  객채(Objects)라는 JS에서의 개념은 
 **설명이 필요한 정보가 담긴 데이터리스트**라고 정의할수있다.
 
-```
+```javascript
 const player ={
     name:"junki",
     points:10,
@@ -41,7 +41,7 @@ player.fat =false;
 ---
 - Function 이란, 반복해서 사용하는 코드 조각이라고 생각하자.
 - 어떠한 코드를 캡슐화해서  실행을 여러번 할수있게 도와준다.
-```
+```javascript
 function sayHello(){
     중괄호안에 실행문이 계속해서 실행.
 }
@@ -51,7 +51,7 @@ sayhello(); -> 실행문!
 --- 
 
 - argument -> function을 실행하는 동안 어떠한 정보를 function 에 전달하는방법
-```
+```javascript
 데이터를 전송하는법
 
 function sayHello(변수명){
@@ -62,7 +62,7 @@ sayHello("변수명");
 ```
 
 이처럼 JS에서는  첫번째 argument로  변수명이 들어오게되면, 그 이름을 받게된다. 이것은 하나의 변수만을 받을수있는것은 아니며, 한개의 변수를 더 받을수있다.
-```
+```javascript
 ex) function sayHello(변수명,변수명){
 
 }
@@ -70,7 +70,7 @@ ex) function sayHello(변수명,변수명){
 sayHello("첫번째변수명",두번째변수);
 ```
 ---
-```
+```javascript
 function sayHello(nameOfPerson, age){
     console.log("Hello my Name is" + nameOfPerson + "and I am" + age)
 }
