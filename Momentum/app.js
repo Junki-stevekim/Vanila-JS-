@@ -1,9 +1,20 @@
-// JS를 이용해 조금더 HTML를 이해해보자
-// document-> 가장핵심적인 JS의 객체
-// JavaScript 는 HTML을 불러와 읽어들인다. 
+const title =document.querySelector("div.hello:first-child h1");
 
 
-document.title; // HTML의 title을 읽어오기 결과:Momentum
-document.title="Hi"; // title을 읽어와 값을 변경하기.
+title.style.color="blue";
 
-document.getElementById("title"); // HTML의 요소를 불러오는 아주아주아주아주 중요한 Object
+function handle(){
+    console.log("Was Clicked here!");
+}
+
+function handled(){
+    console.log("Mouse is Here");
+}
+
+function handleMouseLeave(){
+    title.innerText="Mouse is Gone!";
+}
+
+title.addEventListener("click",handle);
+title.addEventListener("mouseenter",handled);
+title.addEventListener("mouseleave",handleMouseLeave);
