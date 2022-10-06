@@ -50,4 +50,21 @@ console.log(typeof age);
 typeof -> 변수의 value를 확인하는 방법 in javascript
 ```
 
+```javascript
 
+isNaN(); ->숫자인지 아닌지 판별해주는 function
+boolean 값을 return 해준다.
+```
+
+### IF문의 기본구조.
+
+```javascript
+
+if(condition){
+    condition === true 일때 실행
+}else{
+    condition ===false 일때 실행
+}
+```
+
+---
