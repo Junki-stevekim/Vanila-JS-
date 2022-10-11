@@ -1,20 +1,17 @@
-const title =document.querySelector("div.hello:first-child h1");
+// login button,TO-DO list
 
+const loginInput=document.querySelector("#login-form input");
+const loginButton=document.querySelector("#login-form button");
 
-title.style.color="blue";
+function onLoginBtnClick(){
+const username = loginInput.value;
+if(username===""){
+     alert("Please write your name");
 
-function handle(){
-    console.log("Was Clicked here!");
+}else if(username.length>15){
+     alert("Your name is too long")
+}
 }
 
-function handled(){
-    console.log("Mouse is Here");
-}
 
-function handleMouseLeave(){
-    title.innerText="Mouse is Gone!";
-}
-
-title.addEventListener("click",handle);
-title.addEventListener("mouseenter",handled);
-title.addEventListener("mouseleave",handleMouseLeave);
+loginButton.addEventListener("click",onLoginBtnClick);
