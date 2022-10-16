@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form id="login-form">
-    <input  required maxlength="15" value="id" type="text" placeholder="What is your name?" />
-    <button>Log In</button>
-    </form>       
+    <form class="hidden" id="login-form">
+    <input  
+    required 
+    maxlength="15"  
+    type="text" 
+    placeholder="What is your name?" />
+    <input type="submit" value="Log In" />    
+</form>       
+<h1 id="greeting" class="hidden"></h1>
    
     <script src="app.js"></script>
     
