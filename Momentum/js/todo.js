@@ -5,7 +5,8 @@ const toDoList = document.getElementById("todo-list");
 
 
 
-function deleteTodo(){
+function deleteTodo(event){
+  console.log(event.target.parentElement); // 어떤 버튼을 삭제했는지 알수있다.
 
 }
 
@@ -14,12 +15,12 @@ function paintToDo(newTodo) {
   const li = document.createElement("li");
   const span = document.createElement("span");
   span.innerText = newTodo;
-  const button = document.createElement("button");
+  const button = document.createElement("button"); // button 태그를 생성
   button.innerText="★";
   button.addEventListener("click" ,deleteTodo);
   li.appendChild(span);
   li.appendChild(button);
-  toDoList.appendChild(li);
+  toDoList.appendChild(li); // button을 li에 생성
 }
 
 function handleToDoSubmit(event) {
