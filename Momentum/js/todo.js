@@ -4,7 +4,7 @@ const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 
 const TODOS_KEY="todos";
-const toDos = [];
+let toDos = []; // const -> letㅇ로 변경 이전의값들도 저장하기위해
 
 function savingTodo(){
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); // text 값을 String으로 변환
@@ -44,9 +44,7 @@ function handleToDoSubmit(event) {
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
 
-function sayHello(){
 
-}
 
 
 
@@ -55,5 +53,6 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 
 if(savedToDos != null){
   const parsedToDos = JSON.parse(savedToDos);
-  parsedToDos.forEach(); // array 의 객체마다 실행할수있는 반복문
+  toDos = parsedToDos; // user가 새로 작성한것뿐만아니라 이전의 값들도  localstorege에 담아준다
+  parsedToDos.forEach(paintToDo); // array 의 객체마다 실행할수있는 반복문
 }
