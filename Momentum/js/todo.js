@@ -3,10 +3,11 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 
+const TODOS_KEY="todos";
 const toDos = [];
 
 function savingTodo(){
-  localStorage.setItem("todos", JSON.stringify(toDos)); // text 값을 String으로 변환
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); // text 값을 String으로 변환
 
 }
 
@@ -41,3 +42,18 @@ function handleToDoSubmit(event) {
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
+
+function sayHello(){
+
+}
+
+
+
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+
+if(savedToDos != null){
+  const parsedToDos = JSON.parse(savedToDos);
+  parsedToDos.forEach(); // array 의 객체마다 실행할수있는 반복문
+}
