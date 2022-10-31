@@ -4,10 +4,11 @@ const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 
 const TODOS_KEY="todos";
-let toDos = []; // const -> letㅇ로 변경 이전의값들도 저장하기위해
+let toDos = []; // const -> let으로 변경 이전의값들도 저장하기위해
 
 function savingTodo(){
-  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); // text 값을 String으로 변환
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
+   // text 값을 String으로 변환
 
 }
 
@@ -15,8 +16,9 @@ function savingTodo(){
 
 function deleteTodo(event){
   const li = event.target.parentElement;
-  li.remove(); // 어떤 버튼을 삭제했는지 알수있다.
-
+  li.remove(); // 어떤 버튼을 삭제했는지 알수없다.
+  toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id)); // fillter -> return 값이 false인 값을 제외하고 (삭제가아닌) 배열을 새로 구성
+  savedToDos();
 }
 
 
@@ -61,3 +63,5 @@ if(savedToDos != null){
   toDos = parsedToDos; // user가 새로 작성한것뿐만아니라 이전의 값들도  localstorege에 담아준다
   parsedToDos.forEach(paintToDo); // array 의 객체마다 실행할수있는 반복문
 }
+
+
