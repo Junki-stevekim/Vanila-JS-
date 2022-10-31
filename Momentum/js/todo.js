@@ -20,10 +20,11 @@ function deleteTodo(event){
 }
 
 
-function paintToDo(newTodo) {
+function paintToDo(newTodo) { // Object를 담는 function
   const li = document.createElement("li");
+  li.id = newTodo.id;
   const span = document.createElement("span");
-  span.innerText = newTodo;
+  span.innerText = newTodo.text; //Object의 Text
   const button = document.createElement("button"); // button 태그를 생성
   button.innerText="★";
   button.addEventListener("click" ,deleteTodo);
@@ -36,8 +37,12 @@ function handleToDoSubmit(event) {
   event.preventDefault();
   const newTodo = toDoInput.value;
   toDoInput.value = "";
-  toDos.push(newTodo); // 배열로 전송
-  paintToDo(newTodo);
+  const newTodoObj ={
+    text:newTodo,        //Object를 만들어 push해주기
+    id:Date.now(),        // 각각의 item을 구별
+  };
+  toDos.push(newTodoObj); // 배열로 전송
+  paintToDo(newTodoObj);
   savingTodo(); // newTodo를 local storage 에 저장
 }
 
