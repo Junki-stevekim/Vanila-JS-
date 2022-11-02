@@ -1,13 +1,23 @@
-const images = [
-    "0.jpeg",
-    "1.jpeg",
-    "2.jpeg"
-];
+const body = document.querySelector("body");
 
-const chosenImage = images[Math.floor(Math.random() * images.length)];
+const IMG_NUMBER = 3;
 
-const bgImage = document.createElement("img");
+function paintImage(imgNumber) {
+    const image = new Image();
+    image.src = `img/${imgNumber + 1}.jpg`;
+    image.classList.add("bgImage");
+    body.appendChild(image);
+}
 
-bgImage.src = `img/${chosenImage}`;
+function genRandom() {
+    const number = Math.floor(Math.random() * IMG_NUMBER); 
+    console.log(number);
+    return number;
+}
 
-document.body.appendChild(bgImage); // html로 생성된 태그를 보내준다.
+function init() {
+    const randomNumber = genRandom();
+    paintImage(randomNumber);
+}
+
+init();
